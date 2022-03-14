@@ -785,12 +785,8 @@ m_ResolvedPackages:
     - 1.7.0-pre.1
     - 1.7.0-pre.2
     - 1.7.0
-<<<<<<< HEAD
-    verified: 1.5.7
-=======
     - 1.7.1
-    verified: 1.6.4
->>>>>>> Marta
+    verified: 1.5.7
   dependencies:
   - name: com.unity.modules.director
     version: 1.0.0
