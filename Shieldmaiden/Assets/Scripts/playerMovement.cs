@@ -7,9 +7,14 @@ public class playerMovement : MonoBehaviour
     //Variables defined
     public CharacterController controller;
 
+    public Transform cam;
+
     [SerializeField] public float moveSpeed;
     [SerializeField] public float walkSpeed;
     [SerializeField] private float runSpeed;
+
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
 
 
     private void Update()
@@ -30,11 +35,14 @@ public class playerMovement : MonoBehaviour
         if(moveDirection.magnitude >= 0.1f)
         {
             //Rotates the player
-            float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+            float targetAngle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
             //Moves the player
-            controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+            controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
 
             //Speeds the player
             if (moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
