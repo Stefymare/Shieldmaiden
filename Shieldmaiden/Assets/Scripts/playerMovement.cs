@@ -16,6 +16,8 @@ public class playerMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
 
+    [SerializeField] public float gravity;
+
 
     private void Update()
     {
@@ -42,7 +44,9 @@ public class playerMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
             //Moves the player
+            moveDir.y += gravity * Time.deltaTime;
             controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
+            
 
             //Speeds the player
             if (moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
