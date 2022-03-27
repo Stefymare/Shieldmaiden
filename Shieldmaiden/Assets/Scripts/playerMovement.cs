@@ -17,6 +17,11 @@ public class playerMovement : MonoBehaviour
     float turnSmoothVelocity;
 
     [SerializeField] public float gravity;
+   /* [SerializeField] private float jumpForce;
+
+    public Transform groundCheck;
+
+    public LayerMask groundLayer;*/
 
 
     private void Update()
@@ -44,7 +49,19 @@ public class playerMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
             //Moves the player
-            moveDir.y += gravity * Time.deltaTime;
+           moveDir.y += gravity * Time.deltaTime;
+
+            /*
+            bool isGrounded = Physics.CheckSphere(groundCheck.position, 0.15f, groundLayer);
+          //  moveDir.y += gravity * Time.deltaTime;
+            if (isGrounded)
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    moveDir.y = jumpForce;
+                }
+            }*/
+
             controller.Move(moveDir.normalized * moveSpeed * Time.deltaTime);
             
 
