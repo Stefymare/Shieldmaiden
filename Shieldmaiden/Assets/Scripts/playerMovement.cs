@@ -17,17 +17,37 @@ public class playerMovement : MonoBehaviour
     float turnSmoothVelocity;
 
     [SerializeField] public float gravity;
-   /* [SerializeField] private float jumpForce;
+    // [SerializeField] private float jumpForce;//
 
-    public Transform groundCheck;
+     public Transform groundCheck;
 
-    public LayerMask groundLayer;*/
+     public LayerMask groundLayer;
+
+    public float jumpForce = 20;
+
+    public float velocity;
+
+
 
 
     private void Update()
     {
         Move();
+
+        bool isGrounded = Physics.CheckSphere(groundCheck.position, 0.1f, groundLayer);
+
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            velocity = jumpForce;
+        }   
+
+        velocity += gravity * Time.deltaTime;
+
+        controller.Move(new Vector3(0, velocity, 0) * Time.deltaTime);
+        
     }
+
+
 
     private void Move()
     {
