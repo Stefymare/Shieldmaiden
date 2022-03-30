@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class weaponEnabler : MonoBehaviour
 {
-    
     private Animator m_animator;
     public GameObject m_weapon;
 
@@ -21,8 +20,6 @@ public class weaponEnabler : MonoBehaviour
         {
           //  enableWeapon();
             m_animator.SetTrigger("Attack");
-
-
 
         }
         
