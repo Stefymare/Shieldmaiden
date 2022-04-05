@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Weapon
   - mano
+  - Enemy
   layers:
   - Default
   - TransparentFX

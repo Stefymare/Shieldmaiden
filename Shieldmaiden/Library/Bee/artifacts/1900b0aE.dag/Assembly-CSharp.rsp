@@ -325,6 +325,7 @@
 "Assets/Scripts/CameraMovement.cs"
 "Assets/Scripts/changeScene.cs"
 "Assets/Scripts/enemyBehavior.cs"
+"Assets/Scripts/playerManager.cs"
 "Assets/Scripts/playerMovement.cs"
 "Assets/Scripts/weaponEnabler.cs"
 "Assets/WeaponDamage.cs"

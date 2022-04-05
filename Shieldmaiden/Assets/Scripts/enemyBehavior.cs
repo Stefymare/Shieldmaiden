@@ -1,9 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class enemyBehavior : MonoBehaviour
 {
+
+    public float lookRadius = 10f;
+
+    Transform target;
+    NavMeshAgent agent;
+
+
+
     [SerializeField] public int health;
     private Animator e_animator;
     [SerializeField] public int weapondmg;
@@ -12,6 +21,14 @@ public class enemyBehavior : MonoBehaviour
     [SerializeField] public int enemySpeed;
 
     public bool TakeDamage = false;
+
+    public bool HitPlayer = false;
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(transform.position, lookRadius);
+    }
 
     void OnCollisionEnter(Collision col)
     {
@@ -25,34 +42,72 @@ public class enemyBehavior : MonoBehaviour
                 health = health - weapondmg;
             }   
             TakeDamage = true;
+
+        }
+
+        if(col.gameObject.tag == "Player")
+        {
+            HitPlayer = true;
         }
     }
 
-     // Start is called before the first frame update
-     void Start()
+
+
+    // Start is called before the first frame update
+    void Start()
       {
+        target = playerManager.instance.player.transform;
             e_animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
+
+
+        agent = GetComponent<NavMeshAgent>();
     }
 
         // Update is called once per frame
       void Update()
         {
 
+        float distance = Vector3.Distance(target.position, transform.position);
 
-        playerposition = player.GetComponent<Transform>();
+        if(distance <= lookRadius){
+            agent.SetDestination(target.position);
+
+            if(distance <= agent.stoppingDistance)
+            {
+                EnemyAttack();
+                FaceTarget();
+            }
+        }
+
+        void FaceTarget()
+        {
+            Vector3 direction = (target.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        }
+
+
+    //    playerposition = player.GetComponent<Transform>();
       //  transform.position = Vector3.MoveTowards(transform.position, playerposition.position, enemySpeed * Time.deltaTime);
         
         e_animator.SetInteger("State", 1);
 
         TakeDamage = false;
 
-
-         if ((transform.position - playerposition.position).magnitude <= 0.8f)
-         {
+        void EnemyAttack()
+        {
+           
             e_animator.SetTrigger("Attack");
 
-           }
+
+            /*   if ((transform.position - playerposition.position).magnitude <= 0.8f)
+               {
+                   e_animator.SetTrigger("Attack");
+
+               }*/
+        }
+
 
         if (health <= 0)
         {

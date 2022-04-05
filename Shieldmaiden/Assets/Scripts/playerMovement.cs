@@ -28,10 +28,30 @@ public class playerMovement : MonoBehaviour
     public float velocity;
 
 
+    [SerializeField] public int playerhp;
 
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            playerhp = playerhp - 5;
+        }
+    }
+
+    void CheckHP()
+    {
+        if(playerhp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 
     private void Update()
     {
+
+        CheckHP();
+
         Move();
 
         bool isGrounded = Physics.CheckSphere(groundCheck.position, 0.1f, groundLayer);
@@ -44,7 +64,12 @@ public class playerMovement : MonoBehaviour
         velocity += gravity * Time.deltaTime;
 
         controller.Move(new Vector3(0, velocity, 0) * Time.deltaTime);
+
         
+
+
+
+
     }
 
 
