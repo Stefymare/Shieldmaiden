@@ -30,6 +30,10 @@ public class playerMovement : MonoBehaviour
 
     [SerializeField] public int playerhp;
 
+    private void Awake()
+    {
+        Cursor.visible = false;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {

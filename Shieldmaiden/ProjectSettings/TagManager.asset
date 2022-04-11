@@ -7,6 +7,7 @@ TagManager:
   - Weapon
   - mano
   - Enemy
+  - UIButtons
   layers:
   - Default
   - TransparentFX
