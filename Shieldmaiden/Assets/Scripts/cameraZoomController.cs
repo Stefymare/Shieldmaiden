@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class cameraZoomController : MonoBehaviour
 {
 
@@ -25,5 +26,12 @@ public class cameraZoomController : MonoBehaviour
 
         targetZoom -= scrollData * zoomFactor;
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomLerpSpeed);
+    }
+    private void OnGUI()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Application.LoadLevel("SampleScene");
+        }
     }
 }
