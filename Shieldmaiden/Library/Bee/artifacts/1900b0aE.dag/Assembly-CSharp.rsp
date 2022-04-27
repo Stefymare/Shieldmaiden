@@ -329,6 +329,7 @@
 "Assets/Scripts/cameraZoomMovement.cs"
 "Assets/Scripts/changeScene.cs"
 "Assets/Scripts/enemyBehavior.cs"
+"Assets/Scripts/pauseMenu.cs"
 "Assets/Scripts/playerManager.cs"
 "Assets/Scripts/playerMovement.cs"
 "Assets/Scripts/Quit.cs"
