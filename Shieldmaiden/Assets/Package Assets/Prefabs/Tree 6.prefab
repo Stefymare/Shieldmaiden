@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7383804241187992303}
   - component: {fileID: 1640205362030459470}
   - component: {fileID: 7611693424790531430}
+  - component: {fileID: 6563308491127794441}
   m_Layer: 0
   m_Name: Treetrunk
   m_TagString: Untagged
@@ -83,6 +84,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -113,6 +115,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &6563308491127794441
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2753587373253700135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0063267485
+  m_Height: 0.3733589
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.17772004}
 --- !u!1 &7712949013409330948
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +180,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

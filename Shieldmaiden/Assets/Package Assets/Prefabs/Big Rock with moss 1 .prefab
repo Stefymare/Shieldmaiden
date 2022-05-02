@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7390348797988795043}
   - component: {fileID: 5845690484849409286}
   - component: {fileID: 8558220071816956364}
+  - component: {fileID: 8773128163063877585}
   m_Layer: 0
   m_Name: 'Big Rock with moss 1 '
   m_TagString: Untagged
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -82,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &8773128163063877585
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7909477356696971289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.014105291
+  m_Height: 0.04854834
+  m_Direction: 1
+  m_Center: {x: 0.00005364418, y: 0.0072871395, z: -0.00402571}

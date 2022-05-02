@@ -12,12 +12,13 @@ public class playerManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        Cursor.visible = false;
     }
 
     #endregion
 
     public GameObject player;
 
-
+  
 
 }
