@@ -94,8 +94,10 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:UNITY_POST_PROCESSING_STACK_V2
+-define:STARTER_ASSETS_PACKAGES_CHECKED
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll"
@@ -281,6 +283,7 @@
 -r:"C:/Users/Stefano1114/Documents/GitHub/Shieldmaiden/Shieldmaiden/Library/PackageCache/com.unity.cinemachine@2.8.4/Runtime/ThirdParty/clipper_library.dll"
 -r:"C:/Users/Stefano1114/Documents/GitHub/Shieldmaiden/Shieldmaiden/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Cinemachine.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Polybrush.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.TextMeshPro.ref.dll"
@@ -296,10 +299,21 @@
 "Assets/Scripts/cameraZoomMovement.cs"
 "Assets/Scripts/changeScene.cs"
 "Assets/Scripts/enemyBehavior.cs"
+"Assets/Scripts/pauseMenu.cs"
 "Assets/Scripts/playerManager.cs"
 "Assets/Scripts/playerMovement.cs"
 "Assets/Scripts/Quit.cs"
+"Assets/Scripts/SettingsMenu.cs"
 "Assets/Scripts/weaponEnabler.cs"
+"Assets/StarterAssets/InputSystem/StarterAssetsInputs.cs"
+"Assets/StarterAssets/Mobile/Scripts/CanvasInputs/UICanvasControllerInput.cs"
+"Assets/StarterAssets/Mobile/Scripts/Utilities/MobileDisableAutoSwitchControls.cs"
+"Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualButton.cs"
+"Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualJoystick.cs"
+"Assets/StarterAssets/Mobile/Scripts/VirtualInputs/UIVirtualTouchZone.cs"
+"Assets/StarterAssets/ThirdPersonController/Scripts/BasicRigidBodyPush.cs"
+"Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs"
+"Assets/StarterAssets/TutorialInfo/Scripts/Readme.cs"
 "Assets/WeaponDamage.cs"
 -langversion:8.0
 
