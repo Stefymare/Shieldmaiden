@@ -7,6 +7,8 @@ public class weaponEnabler : MonoBehaviour
     private Animator m_animator;
     public GameObject m_weapon;
 
+
+
     // Start is called before the first frame update
     void Start()
     {

@@ -446,6 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  hitffect: {fileID: 0}
   health: 100
   weapondmg: 2
   player: {fileID: 1769510491}
@@ -16578,6 +16579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  hitffect: {fileID: 0}
   health: 10
   weapondmg: 2
   player: {fileID: 1769510491}
@@ -23619,6 +23621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  hitffect: {fileID: 1826662723}
   health: 100
   weapondmg: 10
   player: {fileID: 1769510491}
@@ -25064,6 +25067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  hitffect: {fileID: 0}
   health: 0
   weapondmg: 0
   player: {fileID: 0}
@@ -36109,7 +36113,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826662721}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.9133762, y: 1.2222337, z: -1.9216406}
+  m_LocalPosition: {x: 0.08, y: 1.49, z: -0.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 892442519}
@@ -38708,6 +38712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  hitffect: {fileID: 0}
   health: 10
   weapondmg: 2
   player: {fileID: 1769510491}
@@ -39139,6 +39144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookRadius: 10
+  hitffect: {fileID: 0}
   health: 10
   weapondmg: 2
   player: {fileID: 1769510491}
@@ -39990,7 +39996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e12810560583197468cb00437f667a8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_weapon: {fileID: 673117410}
+  m_weapon: {fileID: 6213652589664207879, guid: 379780a1a22b4bf45a45fcf273254ac9, type: 3}
 --- !u!1001 &6475910037759079207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40131,7 +40137,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerArmature
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4691663241648489738, guid: 89d5e843889e49545a2640f119006373, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 89d5e843889e49545a2640f119006373, type: 3}
 --- !u!4 &8338988565572031786 stripped
 Transform:

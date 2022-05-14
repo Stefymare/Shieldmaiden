@@ -1781,6 +1781,7 @@ GameObject:
   - component: {fileID: 3937390376229293506}
   - component: {fileID: 7415840736280410958}
   - component: {fileID: 6504329221111523134}
+  - component: {fileID: 4691663241648489738}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -2020,6 +2021,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4691663241648489738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6504329221111523122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12810560583197468cb00437f667a8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_weapon: {fileID: 2998306276856595029}
 --- !u!1 &6577565030595083745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2744,3 +2758,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 379780a1a22b4bf45a45fcf273254ac9, type: 3}
+--- !u!1 &2998306276856595029 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6213652589664207879, guid: 379780a1a22b4bf45a45fcf273254ac9, type: 3}
+  m_PrefabInstance: {fileID: 9198404016151955026}
+  m_PrefabAsset: {fileID: 0}

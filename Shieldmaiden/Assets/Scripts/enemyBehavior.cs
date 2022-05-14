@@ -11,7 +11,7 @@ public class enemyBehavior : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
-
+    public ParticleSystem hitffect;
 
     [SerializeField] public int health;
     private Animator e_animator;
@@ -34,12 +34,13 @@ public class enemyBehavior : MonoBehaviour
     {
         if (col.gameObject.tag == "Weapon")
         {
-            
+           hitffect.Play();
           //int weapondmg = col.gameObject.GetComponent<int>();
             e_animator.SetTrigger("Damaged");
             //Destroy(this.gameObject);
             if(TakeDamage == false) {
                 health = health - weapondmg;
+                Debug.Log(health);
             }   
             TakeDamage = true;
 
