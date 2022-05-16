@@ -20,8 +20,9 @@ public class weaponEnabler : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-          //  enableWeapon();
             m_animator.SetTrigger("Attack");
+            //  enableWeapon();
+
 
         }
         
