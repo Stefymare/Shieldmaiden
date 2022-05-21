@@ -8,6 +8,8 @@ TagManager:
   - mano
   - Enemy
   - UIButtons
+  - CinemachineTarget
+  - Altar
   layers:
   - Default
   - TransparentFX
