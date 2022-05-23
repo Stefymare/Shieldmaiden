@@ -13,6 +13,8 @@ public class playerManager : MonoBehaviour
     {
         instance = this;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     #endregion

@@ -23,6 +23,8 @@ public class enemyBehavior : MonoBehaviour
     public bool TakeDamage = false;
 
     public bool HitPlayer = false;
+    public bool AttackCombo = false;
+
 
     private void OnDrawGizmosSelected()
     {
@@ -49,6 +51,7 @@ public class enemyBehavior : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             HitPlayer = true;
+           
         }
     }
 
@@ -98,9 +101,8 @@ public class enemyBehavior : MonoBehaviour
 
         void EnemyAttack()
         {
-           
-            e_animator.SetTrigger("Attack");
 
+            e_animator.SetTrigger("Attack");
 
             /*   if ((transform.position - playerposition.position).magnitude <= 0.8f)
                {
