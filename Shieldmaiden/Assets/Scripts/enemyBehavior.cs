@@ -15,10 +15,12 @@ public class enemyBehavior : MonoBehaviour
 
     [SerializeField] public int health;
     private Animator e_animator;
-    [SerializeField] public int weapondmg;
+    [SerializeField] public int DamageToTake;
     public GameObject player;
     public Transform playerposition;
     [SerializeField] public int enemySpeed;
+    public GameObject GameManager;
+    public playerManager playerManager;
 
     public bool TakeDamage = false;
 
@@ -36,12 +38,15 @@ public class enemyBehavior : MonoBehaviour
     {
         if (col.gameObject.tag == "Weapon")
         {
+            playerManager playerManager = GameManager.GetComponent<playerManager>();
+            DamageToTake = playerManager.Damage;
+
            hitffect.Play();
           //int weapondmg = col.gameObject.GetComponent<int>();
             e_animator.SetTrigger("Damaged");
             //Destroy(this.gameObject);
             if(TakeDamage == false) {
-                health = health - weapondmg;
+                health = health - DamageToTake;
                 Debug.Log(health);
             }   
             TakeDamage = true;
