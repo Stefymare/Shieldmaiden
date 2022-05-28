@@ -324,7 +324,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Free HDR Skyboxes Pack/Example Scenes/Script/RotateCamera.cs"
 "Assets/PatrolScript.cs"
-"Assets/Scripts/altarBehavior.cs"
 "Assets/Scripts/altarMenu.cs"
 "Assets/Scripts/attackScript.cs"
 "Assets/Scripts/axeBehavior.cs"
