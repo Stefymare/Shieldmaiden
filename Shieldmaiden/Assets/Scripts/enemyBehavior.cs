@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class enemyBehavior : MonoBehaviour
 {
 
-    public float lookRadius = 10f;
+    [SerializeField] public float lookRadius = 10f;
 
     Transform target;
     NavMeshAgent agent;
@@ -80,6 +80,7 @@ public class enemyBehavior : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
 
         if(distance <= lookRadius){
+            e_animator.SetInteger("State", 1);
             agent.SetDestination(target.position);
 
             if(distance <= agent.stoppingDistance)
@@ -100,7 +101,7 @@ public class enemyBehavior : MonoBehaviour
     //    playerposition = player.GetComponent<Transform>();
       //  transform.position = Vector3.MoveTowards(transform.position, playerposition.position, enemySpeed * Time.deltaTime);
         
-        e_animator.SetInteger("State", 1);
+        //e_animator.SetInteger("State", 1);
 
         TakeDamage = false;
 

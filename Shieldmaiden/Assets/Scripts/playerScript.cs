@@ -21,11 +21,12 @@ public class playerScript : MonoBehaviour
     }
     public void GodPower1()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKey(KeyCode.E))
         {
             lightningparticles.SetActive(true);
             godPower1 = true;
             Damage = 20;
+            Debug.Log("GodPowerActivated");
         }
         playerScript weaponEnabler = player.GetComponent<playerScript>();
 

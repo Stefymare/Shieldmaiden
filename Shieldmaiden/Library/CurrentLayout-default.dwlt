@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Inspector
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -116,8 +116,8 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 67
 --- !u!114 &6
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 367
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -338,7 +338,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 18770000
       m_LastClickedID: 0
       m_ExpandedIDs: 08fbffff
       m_RenameOverlay:
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 321.01117, y: 0.26140583, z: 25.079548}
+    m_Target: {x: 317.6968, y: 1.8653167, z: 24.129892}
     speed: 2
-    m_Value: {x: 321.01117, y: 0.26140583, z: 25.079548}
+    m_Value: {x: 317.6968, y: 1.8653167, z: 24.129892}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -512,9 +512,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.39444122, y: -0.5592876, z: 0.34282193, w: 0.6434956}
   m_Size:
-    m_Target: 12.099064
+    m_Target: 8.189729
     speed: 2
-    m_Value: 12.099064
+    m_Value: 8.189729
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -668,14 +668,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.54681814
+    - e00: 0.85016954
       e01: 0
       e02: 0
-      e03: 15.000015
+      e03: -214.48848
       e10: 0
-      e11: 0.54681814
+      e11: 0.85016954
       e12: 0
-      e13: -52.002243
+      e13: -244.18634
       e20: 0
       e21: 0
       e22: 1
@@ -764,14 +764,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.99535465
+    - e00: 0.51380193
       e01: 0
       e02: 0
-      e03: -97.720535
+      e03: 115.69409
       e10: 0
-      e11: 0.99535465
+      e11: 0.51380193
       e12: 0
-      e13: 7.834445
+      e13: 148.05202
       e20: 0
       e21: 0
       e22: 1
@@ -875,22 +875,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/troll animations-20220523T144723Z-001 1/troll animations
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/troll animations-20220523T144723Z-001 1/troll animations
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Stefano1114\Documents\GitHub\Shieldmaiden\Shieldmaiden
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 493.2}
-    m_SelectedIDs: 80780000
-    m_LastClickedID: 30848
-    m_ExpandedIDs: 00000000d2770000d4770000d6770000d8770000da770000dc7700007c78000000ca9a3b
+    scrollPos: {x: 0, y: 301}
+    m_SelectedIDs: c4ae0400
+    m_LastClickedID: 306884
+    m_ExpandedIDs: 00000000d8770000da770000dc77000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -918,7 +918,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d2770000d4770000d6770000d8770000da770000dc770000
+    m_ExpandedIDs: 00000000d8770000da770000dc770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -946,7 +946,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000d61a000040610000283000003a9f0000242d0300eab3000006360000
+    m_ExpandedInstanceIDs: c6230000d61a000040610000283000003a9f0000242d0300eab3000006360000647c0000f81f00002c21000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1006,7 +1006,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 517.60004
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
