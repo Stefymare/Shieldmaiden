@@ -7,7 +7,8 @@ public class weaponEnabler : MonoBehaviour
     private Animator m_animator;
     public GameObject m_weapon;
     public GameObject player;
-    public bool godPower1;
+    public bool GodPower1;
+    public bool Dezactivate = false;
     public int AttCount = 0;
     [SerializeField] public int Damage;
     public playerScript playerScript;
@@ -26,13 +27,18 @@ public class weaponEnabler : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            godPower1 = playerScript.godPower1;
-            if(godPower1 == true) { AttCount = AttCount++; }
+            GodPower1 = playerScript.godPower1;
+            Debug.Log(GodPower1);
+            if(GodPower1 == true) 
+            {
+                AttCount = AttCount + 1;
+                Debug.Log(AttCount);
+            }
             m_animator.SetTrigger("Attack");
             if(AttCount == 3) 
-            { 
-                playerScript.godPower1 = false;
-                godPower1 = false;
+            {
+                Dezactivate = true;
+                GodPower1 = false;
                 Damage = 10;
                 AttCount = 0;
             }

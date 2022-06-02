@@ -9,7 +9,13 @@ public class playerScript : MonoBehaviour
     [SerializeField] public int Damage = 10;
     public GameObject player;
     public GameObject lightningparticles;
+    public weaponEnabler weaponEnabler;
 
+    private void Start()
+    {
+        weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>();
+
+    }
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -29,12 +35,16 @@ public class playerScript : MonoBehaviour
             Damage = 20;
             Debug.Log("GodPowerActivated");
         }
-        playerScript weaponEnabler = player.GetComponent<playerScript>();
-
+        if (weaponEnabler.Dezactivate == true) 
+        {
+            godPower1 = weaponEnabler.GodPower1;
+        }
         if(godPower1 == false)
         {
             lightningparticles.SetActive(false);
             Damage = 10;
+            Debug.Log("GodPowerDezactivated");
+
         }
     }
 }
