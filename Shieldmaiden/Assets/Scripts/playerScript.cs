@@ -10,10 +10,18 @@ public class playerScript : MonoBehaviour
     public GameObject player;
     public GameObject lightningparticles;
     public weaponEnabler weaponEnabler;
+    [SerializeField] public int playerHealth;
 
+
+    public GameObject AltarUI;
+
+    public AltarBehavior _altarScript;
+    //
     private void Start()
     {
         weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>();
+        
+        
 
     }
     private void OnCollisionEnter(Collision collision)
@@ -28,7 +36,10 @@ public class playerScript : MonoBehaviour
    
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+       
+        _altarScript = AltarUI.GetComponent<AltarBehavior>();
+
+        if (Input.GetKeyDown(KeyCode.E) && _altarScript.powerChosen == true)
         {
             lightningparticles.SetActive(true);
             godPower1 = true;

@@ -7,11 +7,13 @@ public class enemyBehavior : MonoBehaviour
 {
 
     [SerializeField] public float lookRadius = 10f;
-
+    public playerScript _playerScript;
     Transform target;
     NavMeshAgent agent;
 
     public ParticleSystem hitffect;
+
+    public ParticleSystem thorhitffect;
 
     [SerializeField] public int health;
     private Animator e_animator;
@@ -36,12 +38,18 @@ public class enemyBehavior : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+        GameObject Player = GameObject.Find("PlayerArmature");
+        _playerScript = Player.GetComponent<playerScript>();
         if (col.gameObject.tag == "Weapon")
         {
             playerManager playerManager = GameManager.GetComponent<playerManager>();
             DamageToTake = playerManager.Damage;
 
-           hitffect.Play();
+            if (_playerScript.altarPressed == false)
+            {
+                hitffect.Play();
+            }
+            
           //int weapondmg = col.gameObject.GetComponent<int>();
             e_animator.SetTrigger("Damaged");
             //Destroy(this.gameObject);
@@ -50,7 +58,10 @@ public class enemyBehavior : MonoBehaviour
                 Debug.Log(health);
             }   
             TakeDamage = true;
-
+            if(_playerScript.altarPressed == true)
+            {
+                thorhitffect.Play();
+            }
         }
 
         if(col.gameObject.tag == "Player")
