@@ -19,9 +19,10 @@ public class playerScript : MonoBehaviour
             Debug.Log(altarPressed);
         }
     }
-    public void GodPower1()
+   
+    public void Update()
     {
-        if(Input.GetKey(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.E))
         {
             lightningparticles.SetActive(true);
             godPower1 = true;
