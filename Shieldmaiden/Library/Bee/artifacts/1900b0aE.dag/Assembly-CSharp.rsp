@@ -325,6 +325,7 @@
 "Assets/Free HDR Skyboxes Pack/Example Scenes/Script/RotateCamera.cs"
 "Assets/PatrolScript.cs"
 "Assets/Scripts/AltarBehavior.cs"
+"Assets/Scripts/altarMenu.cs"
 "Assets/Scripts/attackScript.cs"
 "Assets/Scripts/axeBehavior.cs"
 "Assets/Scripts/cameraBehavior.cs"
