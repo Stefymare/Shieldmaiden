@@ -63,7 +63,7 @@ MonoBehaviour:
     name: Tree 6 dark
   - gameObject: {fileID: 455167238420463790, guid: ef7385d9b10cf8148b2372804ad50f7c, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 60.080647
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -111,7 +111,7 @@ MonoBehaviour:
     name: Tall_Tree_2
   - gameObject: {fileID: 1189754920960841870, guid: 1804c8b8bf8f93d4aa931a90433de3d0, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 52.096775
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -397,3 +397,19 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: Grass_Light
+  - gameObject: {fileID: 919132149155446097, guid: c606537c1cb358b4da68d8edf55012a5, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: BlueberryBush1
