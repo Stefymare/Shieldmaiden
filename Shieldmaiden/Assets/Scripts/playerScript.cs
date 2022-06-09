@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 public class playerScript : MonoBehaviour
 {
     public bool altarPressed = false;
@@ -13,6 +14,8 @@ public class playerScript : MonoBehaviour
     public weaponEnabler weaponEnabler;
     [SerializeField] public int playerHealth;
 
+    private Animator m_animator;
+
 
     public GameObject AltarUI;
 
@@ -21,8 +24,8 @@ public class playerScript : MonoBehaviour
     private void Start()
     {
         weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>();
-        
-        
+        m_animator = GetComponent<Animator>();
+
 
     }
     private void OnCollisionEnter(Collision collision)
@@ -40,11 +43,14 @@ public class playerScript : MonoBehaviour
         }
     }
    
+
     public void Update()
     {
         if(playerHealth == 0)
         {
             Debug.Log("Die");
+            m_animator.SetTrigger("Die");
+
         }
        
        /* _altarScript = AltarUI.GetComponent<AltarBehavior>();

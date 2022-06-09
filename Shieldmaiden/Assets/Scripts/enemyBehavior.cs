@@ -39,6 +39,7 @@ public class enemyBehavior : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         GameObject Player = GameObject.Find("PlayerArmature");
+        Animator m_animator = Player.GetComponent<Animator>();
         _playerScript = Player.GetComponent<playerScript>();
         if (col.gameObject.tag == "Weapon")
         {
@@ -68,7 +69,7 @@ public class enemyBehavior : MonoBehaviour
         {
             HitPlayer = true;
             _playerScript.playerHealth -= 10;
-
+            m_animator.SetTrigger("Damage");
         }
     }
 
