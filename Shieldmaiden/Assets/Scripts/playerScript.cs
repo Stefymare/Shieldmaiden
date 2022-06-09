@@ -20,7 +20,9 @@ public class playerScript : MonoBehaviour
     public GameObject AltarUI;
 
     public AltarBehavior _altarScript;
+
     
+
     private void Start()
     {
         weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>();

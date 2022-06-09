@@ -30,6 +30,10 @@ public class enemyBehavior : MonoBehaviour
     public bool AttackCombo = false;
 
 
+
+ 
+
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -67,9 +71,12 @@ public class enemyBehavior : MonoBehaviour
 
         if(col.gameObject.tag == "Player")
         {
+            GameObject hit = GameObject.Find("Hit_03");
+            ParticleSystem hitEffect = hit.GetComponent<ParticleSystem>();
             HitPlayer = true;
             _playerScript.playerHealth -= 10;
             m_animator.SetTrigger("Damage");
+            hitEffect.Play();
         }
     }
 
