@@ -10,6 +10,7 @@ TagManager:
   - UIButtons
   - CinemachineTarget
   - Altar
+  - Bear
   layers:
   - Default
   - TransparentFX

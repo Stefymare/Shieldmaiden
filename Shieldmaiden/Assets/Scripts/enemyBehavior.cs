@@ -67,7 +67,8 @@ public class enemyBehavior : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             HitPlayer = true;
-           
+            _playerScript.playerHealth -= 10;
+
         }
     }
 

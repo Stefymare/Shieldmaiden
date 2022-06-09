@@ -9,6 +9,9 @@ public class AltarBehavior : MonoBehaviour
     public void ChoosePower()
     {
         powerChosen = true;
+        GameObject AltarUI = GameObject.Find("Canvas");
+        altarMenu altarScript = AltarUI.GetComponent<altarMenu>();
+        altarScript.Resume();
         Debug.Log("PowerChosen"+ powerChosen);
     }
 }

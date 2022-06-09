@@ -10,6 +10,8 @@ public class altarMenu : MonoBehaviour
 
     public GameObject GodPower1;
 
+
+
     
 
     // Update is called once per frame
@@ -17,7 +19,8 @@ public class altarMenu : MonoBehaviour
     {
         GameObject Player = GameObject.Find("PlayerArmature");
         playerScript playerScript = Player.GetComponent<playerScript>();
-        
+
+
 
         if (Input.GetKeyDown(KeyCode.Q)&& playerScript.altarPressed)
         {
@@ -25,7 +28,7 @@ public class altarMenu : MonoBehaviour
             {
                 Resume();
             }
-            else
+            else 
             {
                 Pause();
             }

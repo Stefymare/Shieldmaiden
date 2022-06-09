@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class playerScript : MonoBehaviour
 {
     public bool altarPressed = false;
@@ -32,10 +33,19 @@ public class playerScript : MonoBehaviour
             altarPressed = true;
             Debug.Log(altarPressed);
         }
+
+        if (collision.gameObject.tag == "Bear")
+        {
+            Application.LoadLevel("SecondCutScene");
+        }
     }
    
     public void Update()
     {
+        if(playerHealth == 0)
+        {
+            Debug.Log("Die");
+        }
        
        /* _altarScript = AltarUI.GetComponent<AltarBehavior>();
 
