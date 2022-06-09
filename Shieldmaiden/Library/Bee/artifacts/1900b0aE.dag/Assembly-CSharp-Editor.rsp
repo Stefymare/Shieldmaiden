@@ -336,6 +336,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Editor/HolyShift/Scripts/CheckForStandardAssets.cs"
 "Assets/GameObjectBrush/Scripts/Editor/AddObjectPopup.cs"
 "Assets/GameObjectBrush/Scripts/Editor/BrushCollection.cs"
 "Assets/GameObjectBrush/Scripts/Editor/BrushObject.cs"
