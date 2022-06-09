@@ -60,7 +60,7 @@ public class enemyBehavior : MonoBehaviour
             TakeDamage = true;
             if(_playerScript.altarPressed == true)
             {
-                thorhitffect.Play();
+               // thorhitffect.Play();
             }
         }
 

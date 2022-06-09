@@ -8,6 +8,8 @@ public class altarMenu : MonoBehaviour
 
     public GameObject altarMenuUI;
 
+    public GameObject GodPower1;
+
     
 
     // Update is called once per frame
@@ -27,7 +29,9 @@ public class altarMenu : MonoBehaviour
             {
                 Pause();
             }
+            GodPower1.SetActive(true);
         }
+        
     }
 
     public void Resume()

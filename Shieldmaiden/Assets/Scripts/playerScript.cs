@@ -6,7 +6,7 @@ public class playerScript : MonoBehaviour
 {
     public bool altarPressed = false;
     public bool godPower1 = false;
-    [SerializeField] public int Damage = 10;
+   // [SerializeField] public int Damage = 10;
     public GameObject player;
     public GameObject lightningparticles;
     public weaponEnabler weaponEnabler;
@@ -37,7 +37,7 @@ public class playerScript : MonoBehaviour
     public void Update()
     {
        
-        _altarScript = AltarUI.GetComponent<AltarBehavior>();
+       /* _altarScript = AltarUI.GetComponent<AltarBehavior>();
 
         if (Input.GetKeyDown(KeyCode.E) && _altarScript.powerChosen == true)
         {
@@ -56,6 +56,6 @@ public class playerScript : MonoBehaviour
             Damage = 10;
             Debug.Log("GodPowerDezactivated");
 
-        }
+        }*/
     }
 }

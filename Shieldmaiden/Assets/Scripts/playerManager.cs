@@ -9,14 +9,14 @@ public class playerManager : MonoBehaviour
 
     public static playerManager instance;
     public static int Damage;
-    public playerScript playerScript;
+    public weaponEnabler weaponEnabler;
 
     private void Awake()
     {
         instance = this;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        playerScript playerScript = player.GetComponent<playerScript>();
+        weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>();
 
     }
 
@@ -26,7 +26,7 @@ public class playerManager : MonoBehaviour
 
     private void Update()
     {
-        Damage = playerScript.Damage;
+        Damage = weaponEnabler.Damage;
     }
 
 }
