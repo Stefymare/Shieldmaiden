@@ -27,6 +27,8 @@ public class playerMovement : MonoBehaviour
 
     public float velocity;
 
+    public bool altarPressed = false;
+
 
     [SerializeField] public int playerhp;
 
@@ -40,6 +42,12 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             playerhp = playerhp - 5;
+        }
+
+        if (collision.gameObject.name == "Altar (1)")
+        {
+             altarPressed = true;
+            Debug.Log(altarPressed);
         }
     }
 
@@ -136,4 +144,6 @@ public class playerMovement : MonoBehaviour
         moveSpeed = runSpeed;
 
     }
+
+    
 }

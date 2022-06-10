@@ -11,18 +11,22 @@ public class enemyBehavior : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
-
+    public ParticleSystem hitffect;
 
     [SerializeField] public int health;
     private Animator e_animator;
-    [SerializeField] public int weapondmg;
+    [SerializeField] public int DamageToTake;
     public GameObject player;
     public Transform playerposition;
     [SerializeField] public int enemySpeed;
+    public GameObject GameManager;
+    public playerManager playerManager;
 
     public bool TakeDamage = false;
 
     public bool HitPlayer = false;
+    public bool AttackCombo = false;
+
 
     private void OnDrawGizmosSelected()
     {
@@ -34,12 +38,16 @@ public class enemyBehavior : MonoBehaviour
     {
         if (col.gameObject.tag == "Weapon")
         {
-            
+            playerManager playerManager = GameManager.GetComponent<playerManager>();
+            DamageToTake = playerManager.Damage;
+
+           hitffect.Play();
           //int weapondmg = col.gameObject.GetComponent<int>();
             e_animator.SetTrigger("Damaged");
             //Destroy(this.gameObject);
             if(TakeDamage == false) {
-                health = health - weapondmg;
+                health = health - DamageToTake;
+                Debug.Log(health);
             }   
             TakeDamage = true;
 
@@ -48,6 +56,7 @@ public class enemyBehavior : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             HitPlayer = true;
+           
         }
     }
 
@@ -97,9 +106,8 @@ public class enemyBehavior : MonoBehaviour
 
         void EnemyAttack()
         {
-           
-            e_animator.SetTrigger("Attack");
 
+            e_animator.SetTrigger("Attack");
 
             /*   if ((transform.position - playerposition.position).magnitude <= 0.8f)
                {
