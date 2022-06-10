@@ -6,10 +6,24 @@ public class playerScript : MonoBehaviour
 {
     public bool altarPressed = false;
     public bool godPower1 = false;
-    [SerializeField] public int Damage = 10;
+   // [SerializeField] public int Damage = 10;
     public GameObject player;
     public GameObject lightningparticles;
+    public weaponEnabler weaponEnabler;
+    [SerializeField] public int playerHealth;
 
+
+    public GameObject AltarUI;
+
+    public AltarBehavior _altarScript;
+    
+    private void Start()
+    {
+        weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>();
+        
+        
+
+    }
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -19,20 +33,29 @@ public class playerScript : MonoBehaviour
             Debug.Log(altarPressed);
         }
     }
-    public void GodPower1()
+   
+    public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+       
+       /* _altarScript = AltarUI.GetComponent<AltarBehavior>();
+
+        if (Input.GetKeyDown(KeyCode.E) && _altarScript.powerChosen == true)
         {
             lightningparticles.SetActive(true);
             godPower1 = true;
             Damage = 20;
+            Debug.Log("GodPowerActivated");
         }
-        playerScript weaponEnabler = player.GetComponent<playerScript>();
-
+        if (weaponEnabler.Dezactivate == true) 
+        {
+            godPower1 = weaponEnabler.GodPower1;
+        }
         if(godPower1 == false)
         {
             lightningparticles.SetActive(false);
             Damage = 10;
-        }
+            Debug.Log("GodPowerDezactivated");
+
+        }*/
     }
 }

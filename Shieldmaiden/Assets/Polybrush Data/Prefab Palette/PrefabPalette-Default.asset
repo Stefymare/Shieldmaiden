@@ -47,7 +47,7 @@ MonoBehaviour:
     name: Small rock with moss
   - gameObject: {fileID: 3914129058140287510, guid: cfe9577aefebc63428bcfa8116a093d1, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 47.438145
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -63,7 +63,7 @@ MonoBehaviour:
     name: Tree 6 dark
   - gameObject: {fileID: 455167238420463790, guid: ef7385d9b10cf8148b2372804ad50f7c, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 90.30412
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -95,7 +95,7 @@ MonoBehaviour:
     name: Tree 6
   - gameObject: {fileID: 6323025805986529000, guid: e034af366ca7ea249918da47738bc8ae, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 51.52062
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -111,7 +111,7 @@ MonoBehaviour:
     name: Tall_Tree_2
   - gameObject: {fileID: 1189754920960841870, guid: 1804c8b8bf8f93d4aa931a90433de3d0, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 92.34536
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -127,7 +127,7 @@ MonoBehaviour:
     name: Tall_Tree_1
   - gameObject: {fileID: 2929069950232813205, guid: 93bd2a56aed47f14480d060f0d4bb793, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 61.726807
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -143,7 +143,7 @@ MonoBehaviour:
     name: Tree 1 Updated
   - gameObject: {fileID: 368332345697254594, guid: ff863d224436e4b45bc14055cb467404, type: 3}
     settings:
-      m_Strength: 60.080647
+      m_Strength: 6.6134024
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -397,3 +397,67 @@ MonoBehaviour:
       m_YScaleBool: 0
       m_ZScaleBool: 0
     name: Grass_Light
+  - gameObject: {fileID: 919132149155446097, guid: c606537c1cb358b4da68d8edf55012a5, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: BlueberryBush1
+  - gameObject: {fileID: 370255189776896608, guid: bc513cb4563b5754a94be8b754f48c03, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Tree 5 Updated
+  - gameObject: {fileID: 4372424952984578822, guid: c23ed9dd32e1a374182ff271a1fcf137, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: stick_01
+  - gameObject: {fileID: 370255189776896608, guid: bc513cb4563b5754a94be8b754f48c03, type: 3}
+    settings:
+      m_Strength: 50
+      m_RotationRangeMin: {x: 0, y: 0, z: 0}
+      m_RotationRangeMax: {x: 0, y: 0, z: 0}
+      m_ScaleRangeMin: {x: 1, y: 1, z: 1}
+      m_ScaleRangeMax: {x: 1, y: 1, z: 1}
+      m_UniformScale: {x: 1, y: 1}
+      m_UniformBool: 0
+      m_XRotationBool: 0
+      m_YRotationBool: 0
+      m_ZRotationBool: 0
+      m_XScaleBool: 0
+      m_YScaleBool: 0
+      m_ZScaleBool: 0
+    name: Tree 5 Updated

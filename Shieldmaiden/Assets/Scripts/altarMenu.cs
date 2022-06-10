@@ -8,6 +8,8 @@ public class altarMenu : MonoBehaviour
 
     public GameObject altarMenuUI;
 
+    public GameObject GodPower1;
+
     
 
     // Update is called once per frame
@@ -27,7 +29,9 @@ public class altarMenu : MonoBehaviour
             {
                 Pause();
             }
+            GodPower1.SetActive(true);
         }
+        
     }
 
     public void Resume()
@@ -36,7 +40,8 @@ public class altarMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         Cursor.visible = false;
-
+        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Pause()
@@ -45,7 +50,7 @@ public class altarMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
         Cursor.visible = true;
-
+        Cursor.lockState = CursorLockMode.None;
     }
 
 }
