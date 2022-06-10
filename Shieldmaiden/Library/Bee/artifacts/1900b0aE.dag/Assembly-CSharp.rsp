@@ -343,6 +343,7 @@
 "Assets/Scripts/cameraZoomMovement.cs"
 "Assets/Scripts/changeScene.cs"
 "Assets/Scripts/enemyBehavior.cs"
+"Assets/Scripts/FollowEnemy.cs"
 "Assets/Scripts/godPower.cs"
 "Assets/Scripts/GodPowerUI.cs"
 "Assets/Scripts/healthPickup.cs"
@@ -362,6 +363,7 @@
 "Assets/StarterAssets/ThirdPersonController/Scripts/BasicRigidBodyPush.cs"
 "Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs"
 "Assets/StarterAssets/TutorialInfo/Scripts/Readme.cs"
+"Assets/Travis Game Assets/Hit Impact Effects/Demo Scene/Scripts/HitImpactEffectsPreview.cs"
 "Assets/WeaponDamage.cs"
 -langversion:8.0
 
