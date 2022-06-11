@@ -15,8 +15,11 @@ public class GodPowerUI : MonoBehaviour
 
     void Update()
     {
+        
+
         if (Input.GetKeyDown(KeyCode.E))
         {
+            
             print("key pressed");
             Power();
         }

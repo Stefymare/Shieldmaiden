@@ -30,8 +30,12 @@ public class enemyBehavior : MonoBehaviour
     public bool AttackCombo = false;
 
 
+    public AudioSource random;
+    public AudioClip[] audioClipArray;
 
- 
+    public AudioSource random2;
+    public AudioClip[] audioClipArray2;
+
 
 
     private void OnDrawGizmosSelected()
@@ -47,6 +51,7 @@ public class enemyBehavior : MonoBehaviour
         _playerScript = Player.GetComponent<playerScript>();
         if (col.gameObject.tag == "Weapon")
         {
+            Sounds2();
             playerManager playerManager = GameManager.GetComponent<playerManager>();
             DamageToTake = playerManager.Damage;
 
@@ -71,6 +76,7 @@ public class enemyBehavior : MonoBehaviour
 
         if(col.gameObject.tag == "Player")
         {
+            Sounds();
             GameObject hit = GameObject.Find("Hit_03");
             ParticleSystem hitEffect = hit.GetComponent<ParticleSystem>();
             HitPlayer = true;
@@ -80,16 +86,31 @@ public class enemyBehavior : MonoBehaviour
         }
     }
 
+    void Sounds()
+    {
+        random.clip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+        random.PlayOneShot(random.clip);
+    }
+
+    void Sounds2()
+    {
+        random2.clip = audioClipArray2[Random.Range(0, audioClipArray2.Length)];
+        random2.PlayOneShot(random2.clip);
+    }
+
 
 
     // Start is called before the first frame update
     void Start()
       {
+        random = GetComponent<AudioSource>();
+
+        random2 = GetComponent<AudioSource>();
         target = playerManager.instance.player.transform;
             e_animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
 
-
+     //   random.clip =audioClipArray[Random.Range(0,audioClipArray.Length)];
         agent = GetComponent<NavMeshAgent>();
     }
 
