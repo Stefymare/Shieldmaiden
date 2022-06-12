@@ -18,14 +18,21 @@ public class weaponEnabler : MonoBehaviour
     public GameObject AltarUI;
 
     public AltarBehavior _altarScript;
+    public AudioSource random;
+    public AudioClip[] audioClipArray;
 
+    void Sounds()
+    {
+        random.clip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+        random.PlayOneShot(random.clip);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         m_animator = GetComponent<Animator>();
         playerScript playerScript = player.GetComponent<playerScript>();
-
+        random = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,6 +57,7 @@ public class weaponEnabler : MonoBehaviour
                 AttCount = AttCount + 1;
                 Debug.Log(AttCount);
             }
+            Sounds();
             m_animator.SetTrigger("Attack");
             if(AttCount == 4) 
             {

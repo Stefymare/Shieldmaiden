@@ -21,13 +21,18 @@ public class playerScript : MonoBehaviour
 
     public AltarBehavior _altarScript;
 
-    
-
+    public AudioSource random;
+    public AudioClip[] audioClipArray;
+    void Sounds()
+    {
+        random.clip = audioClipArray[Random.Range(0, audioClipArray.Length)];
+        random.PlayOneShot(random.clip);
+    }
     private void Start()
     {
         weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>();
         m_animator = GetComponent<Animator>();
-
+        random = GetComponent<AudioSource>();
 
     }
     private void OnCollisionEnter(Collision collision)
@@ -44,15 +49,20 @@ public class playerScript : MonoBehaviour
             Application.LoadLevel("SecondCutScene");
         }
     }
-   
+   void RestartGame()
+    {
+        Application.LoadLevel("SampleScene");
+    }
 
     public void Update()
     {
         if(playerHealth == 0)
         {
+            Sounds();
+          
             Debug.Log("Die");
             m_animator.SetTrigger("Die");
-
+          //  RestartGame();
         }
        
        /* _altarScript = AltarUI.GetComponent<AltarBehavior>();
