@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
@@ -23,6 +24,13 @@ public class playerScript : MonoBehaviour
 
     public AudioSource random;
     public AudioClip[] audioClipArray;
+
+    public Slider Slider;
+
+    public void SetHealth(int playerHealth)
+    {
+        Slider.value = playerHealth;
+    }
     void Sounds()
     {
         random.clip = audioClipArray[Random.Range(0, audioClipArray.Length)];
@@ -56,6 +64,7 @@ public class playerScript : MonoBehaviour
 
     public void Update()
     {
+        SetHealth(playerHealth);
         if(playerHealth == 0)
         {
             Sounds();
