@@ -31,7 +31,7 @@ MonoBehaviour:
     name: Tree Trunk
   - gameObject: {fileID: 2172169670388502358, guid: d36a398cb32c07a4d9646a9e20cfa268, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 41.521767
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -79,7 +79,7 @@ MonoBehaviour:
     name: Tree 6 light
   - gameObject: {fileID: 455167238420463790, guid: 4cc364c10d27f4a4e9cc6bc7f9a52224, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 27.156599
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -111,7 +111,7 @@ MonoBehaviour:
     name: Tall_Tree_2
   - gameObject: {fileID: 1189754920960841870, guid: 1804c8b8bf8f93d4aa931a90433de3d0, type: 3}
     settings:
-      m_Strength: 55.603092
+      m_Strength: 61.726807
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -207,7 +207,7 @@ MonoBehaviour:
     name: Fallen_Tree_3-normal
   - gameObject: {fileID: 7123863582369823793, guid: 6e506793835393547968407e81392ae3, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 24.984535
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -239,7 +239,7 @@ MonoBehaviour:
     name: Rock Stack
   - gameObject: {fileID: 8690535203324781574, guid: 93edaca61215f31499301bcad9925f68, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 14.778351
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -255,7 +255,7 @@ MonoBehaviour:
     name: Pebble Pile
   - gameObject: {fileID: 824219061851791098, guid: 2dd852974450f3446acf12061eb2984e, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 16.819588
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -271,7 +271,7 @@ MonoBehaviour:
     name: MediumS Rock
   - gameObject: {fileID: 193401804351863894, guid: beebf94ac7995c540997f58440171405, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 10.695876
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -287,7 +287,7 @@ MonoBehaviour:
     name: Small Rock
   - gameObject: {fileID: 6748730180188395260, guid: 4405674923b359948b750a6453c42aab, type: 3}
     settings:
-      m_Strength: 50
+      m_Strength: 24.984537
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
@@ -303,7 +303,7 @@ MonoBehaviour:
     name: MediumL Rock
   - gameObject: {fileID: 4697735121401103817, guid: 3fbd7da0a2bdf7b40b0a79ce19219e96, type: 3}
     settings:
-      m_Strength: 53.69355
+      m_Strength: 15.185618
       m_RotationRangeMin: {x: 0, y: 0, z: 0}
       m_RotationRangeMax: {x: 0, y: 0, z: 0}
       m_ScaleRangeMin: {x: 1, y: 1, z: 1}
