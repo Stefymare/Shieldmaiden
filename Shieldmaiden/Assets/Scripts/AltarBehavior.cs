@@ -8,6 +8,7 @@ public class AltarBehavior : MonoBehaviour
 
     public void ChoosePower()
     {
+
         GameObject ThunderSound = GameObject.Find("ThunderFX");
         AudioSource ThunderFX = ThunderSound.GetComponent<AudioSource>();
         ThunderFX.Play();
@@ -25,5 +26,8 @@ public class AltarBehavior : MonoBehaviour
         altarMenu altarScript = AltarUI.GetComponent<altarMenu>();
         altarScript.Resume();
         Debug.Log("PowerChosen"+ powerChosen);
+        
     }
+
+
 }

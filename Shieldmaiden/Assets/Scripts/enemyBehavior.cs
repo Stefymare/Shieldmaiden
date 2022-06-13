@@ -157,8 +157,9 @@ public class enemyBehavior : MonoBehaviour
 
 
         if (health <= 0)
-        {
-            Destroy(this.gameObject);
+        {  
+            e_animator.SetTrigger("Die");
+            Destroy(this.gameObject, 5f);
         }
 
         }
