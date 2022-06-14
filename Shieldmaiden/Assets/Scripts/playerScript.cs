@@ -9,7 +9,7 @@ public class playerScript : MonoBehaviour
 {
     public bool altarPressed = false;
     public bool godPower1 = false;
-   // [SerializeField] public int Damage = 10;
+    // [SerializeField] public int Damage = 10;
     public GameObject player;
     public GameObject lightningparticles;
     public weaponEnabler weaponEnabler;
@@ -28,6 +28,10 @@ public class playerScript : MonoBehaviour
     public Slider Slider;
 
     public bool appliedDamaged = false;
+    public bool block = false;
+
+    public int DamageToTake = 10;
+    public int ReducedDamage = 5;
 
     public void SetHealth(int playerHealth)
     {
@@ -67,7 +71,7 @@ public class playerScript : MonoBehaviour
             Sounds();
             GameObject hit = GameObject.Find("Hit_03");
             ParticleSystem hitEffect = hit.GetComponent<ParticleSystem>();
-            playerHealth -= 10;
+            playerHealth = playerHealth - DamageToTake;
             m_animator.SetTrigger("Damage");
             hitEffect.Play();
             Debug.Log(playerHealth);
@@ -90,7 +94,22 @@ public class playerScript : MonoBehaviour
             m_animator.SetTrigger("Die");
           //  RestartGame();
         }
-       
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            block = true;
+            m_animator.SetBool("Block", true);
+        }
+        if (!Input.GetKey(KeyCode.Mouse1))
+        {
+            block = false;
+            m_animator.SetBool("Block", false);
+        }
+
+        if (block == true)
+        {
+            DamageToTake = ReducedDamage; 
+        } else { DamageToTake = 10; }
        /* _altarScript = AltarUI.GetComponent<AltarBehavior>();
 
         if (Input.GetKeyDown(KeyCode.E) && _altarScript.powerChosen == true)
