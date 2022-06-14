@@ -27,6 +27,8 @@ public class playerScript : MonoBehaviour
 
     public Slider Slider;
 
+    public bool appliedDamaged = false;
+
     public void SetHealth(int playerHealth)
     {
         Slider.value = playerHealth;
@@ -57,7 +59,22 @@ public class playerScript : MonoBehaviour
             Application.LoadLevel("SecondCutScene");
         }
     }
-   void RestartGame()
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnemyWeapon" && appliedDamaged == false)
+        {
+            appliedDamaged = true;
+            Sounds();
+            GameObject hit = GameObject.Find("Hit_03");
+            ParticleSystem hitEffect = hit.GetComponent<ParticleSystem>();
+            playerHealth -= 10;
+            m_animator.SetTrigger("Damage");
+            hitEffect.Play();
+            Debug.Log(playerHealth);
+        }
+
+    }
+    void RestartGame()
     {
         Application.LoadLevel("SampleScene");
     }

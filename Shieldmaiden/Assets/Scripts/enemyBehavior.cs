@@ -35,7 +35,7 @@ public class enemyBehavior : MonoBehaviour
     public AudioSource random2;
     public AudioClip[] audioClipArray2;
 
-
+    public GameObject m_weapon;
 
 
     private void OnDrawGizmosSelected()
@@ -74,7 +74,7 @@ public class enemyBehavior : MonoBehaviour
             }
         }
 
-        if(col.gameObject.tag == "Player")
+       /* if(col.gameObject.tag == "Player")
         {
             Sounds();
             GameObject hit = GameObject.Find("Hit_03");
@@ -83,7 +83,7 @@ public class enemyBehavior : MonoBehaviour
             _playerScript.playerHealth -= 10;
             m_animator.SetTrigger("Damage");
             hitEffect.Play();
-        }
+        }*/
     }
 
 
@@ -145,7 +145,7 @@ public class enemyBehavior : MonoBehaviour
 
         void EnemyAttack()
         {
-
+            _playerScript.appliedDamaged = false;
             e_animator.SetTrigger("Attack");
 
             /*   if ((transform.position - playerposition.position).magnitude <= 0.8f)
@@ -155,7 +155,6 @@ public class enemyBehavior : MonoBehaviour
                }*/
         }
 
-
         if (health <= 0)
         {  
             e_animator.SetTrigger("Die");
@@ -163,6 +162,13 @@ public class enemyBehavior : MonoBehaviour
         }
 
         }
-    
+    void enableWeapon()
+    {
+        m_weapon.GetComponent<Collider>().enabled = true;
+    }
 
+    void disableWeapon()
+    {
+        m_weapon.GetComponent<Collider>().enabled = false;
+    }
 }

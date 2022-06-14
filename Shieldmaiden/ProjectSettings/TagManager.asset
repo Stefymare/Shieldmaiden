@@ -11,6 +11,7 @@ TagManager:
   - CinemachineTarget
   - Altar
   - Bear
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX
