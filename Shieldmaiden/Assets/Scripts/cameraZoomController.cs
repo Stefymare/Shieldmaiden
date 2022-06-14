@@ -38,7 +38,7 @@ public class cameraZoomController : MonoBehaviour
             panelnumber = panelnumber + 1;
             animator.SetInteger("Panel", panelnumber);
 
-            if (panelnumber == 6)
+            if (panelnumber == 14)
             {
                 Application.LoadLevel("SampleScene");
             }
