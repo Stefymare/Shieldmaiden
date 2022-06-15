@@ -19,7 +19,7 @@
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "Scattering.AvoidOverlappingObjects",
-                "value": "{\"m_Value\":false}"
+                "value": "{\"m_Value\":true}"
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -64,17 +64,17 @@
             {
                 "type": "UnityEngine.Polybrush.MirrorCoordinateSpace, Unity.Polybrush, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "Brush.MirrorSpace",
-                "value": "{\"m_Value\":0}"
+                "value": "{\"m_Value\":1}"
             },
             {
                 "type": "UnityEditor.Polybrush.PrefabLoadout, Unity.Polybrush.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ScatteringEditor.userLoadout",
-                "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"8010270571f9d4212a9b36450043e643\",\"type\":2},\"prefab\":{\"fileID\":2172169670388502358,\"guid\":\"d36a398cb32c07a4d9646a9e20cfa268\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"8010270571f9d4212a9b36450043e643\",\"type\":2},\"prefab\":{\"fileID\":6748730180188395260,\"guid\":\"4405674923b359948b750a6453c42aab\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"8010270571f9d4212a9b36450043e643\",\"type\":2},\"prefab\":{\"fileID\":193401804351863894,\"guid\":\"beebf94ac7995c540997f58440171405\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"8010270571f9d4212a9b36450043e643\",\"type\":2},\"prefab\":{\"fileID\":4697735121401103817,\"guid\":\"3fbd7da0a2bdf7b40b0a79ce19219e96\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"8010270571f9d4212a9b36450043e643\",\"type\":2},\"prefab\":{\"fileID\":8690535203324781574,\"guid\":\"93edaca61215f31499301bcad9925f68\",\"type\":3}},{\"palette\":{\"fileID\":11400000,\"guid\":\"8010270571f9d4212a9b36450043e643\",\"type\":2},\"prefab\":{\"fileID\":7123863582369823793,\"guid\":\"6e506793835393547968407e81392ae3\",\"type\":3}}]}}"
+                "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"8010270571f9d4212a9b36450043e643\",\"type\":2},\"prefab\":{\"fileID\":5742518485157938317,\"guid\":\"60a32261c47bd284dac7d6bf836e1e55\",\"type\":3}}]}}"
             },
             {
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "ScatteringEditor.PreviewThumSize",
-                "value": "{\"m_Value\":103}"
+                "value": "{\"m_Value\":83}"
             },
             {
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
