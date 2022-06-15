@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class enemyBehavior : MonoBehaviour
 {
+    public float currentTime = 0f;
+    float startingTime = 5f;
 
     [SerializeField] public float lookRadius = 10f;
     public playerScript _playerScript;
@@ -109,6 +111,7 @@ public class enemyBehavior : MonoBehaviour
 
         random2 = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
+        currentTime = startingTime;
     }
 
         // Update is called once per frame
@@ -156,9 +159,17 @@ public class enemyBehavior : MonoBehaviour
         }
 
         if (health <= 0)
-        {  
+        {
+            currentTime -= 1 * Time.deltaTime;
             e_animator.SetTrigger("Die");
-            Destroy(this.gameObject, 5f);
+            if (currentTime <= 0f)
+            {
+                transform.position = new Vector3(1, -10, 1);
+                currentTime = 0f;
+
+            }
+            
+            //Destroy(this.gameObject, 5f);
         }
 
         }

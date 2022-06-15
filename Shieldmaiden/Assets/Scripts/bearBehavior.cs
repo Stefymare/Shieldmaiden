@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bearBehavior : MonoBehaviour
 {
-
+    public GameObject objective3;
     public AudioSource random;
     public AudioClip[] audioClipArray;
 
@@ -27,6 +27,7 @@ public class bearBehavior : MonoBehaviour
         {
             
             Sounds();
+            objective3.SetActive(true);
         }
     }
     
