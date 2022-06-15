@@ -10,6 +10,7 @@ public class bearBehavior : MonoBehaviour
 
     void Sounds()
     {
+
         random.clip = audioClipArray[Random.Range(0, audioClipArray.Length)];
         random.PlayOneShot(random.clip);
     }
@@ -24,6 +25,7 @@ public class bearBehavior : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            
             Sounds();
         }
     }
