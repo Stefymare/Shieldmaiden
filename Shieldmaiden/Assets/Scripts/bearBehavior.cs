@@ -7,6 +7,7 @@ public class bearBehavior : MonoBehaviour
     public GameObject objective3;
     public AudioSource random;
     public AudioClip[] audioClipArray;
+    public enemyHealthManager enemyHealthManager;
 
     void Sounds()
     {

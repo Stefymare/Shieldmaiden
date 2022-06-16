@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemyHealthManager : MonoBehaviour
 {
     public GameObject objective2;
+    public bool defeated = false;
     // Update is called once per frame
     void Update()
     {
@@ -26,6 +27,7 @@ public class enemyHealthManager : MonoBehaviour
         if(_enemy1.health <= 0 && _enemy2.health <= 0 && _enemy3.health <= 0 && _enemy4.health <= 0 && _enemy5.health <= 0)
         {
             WinObjective();
+            defeated = true;
         }
         
     }

@@ -33,6 +33,8 @@ public class playerScript : MonoBehaviour
     public int DamageToTake = 10;
     public int ReducedDamage = 5;
 
+    public enemyHealthManager enemyHealthManager;
+
     public void SetHealth(int playerHealth)
     {
         Slider.value = playerHealth;
@@ -58,7 +60,7 @@ public class playerScript : MonoBehaviour
             Debug.Log(altarPressed);
         }
 
-        if (collision.gameObject.tag == "Bear")
+        if (collision.gameObject.tag == "Bear" && enemyHealthManager.defeated == true)
         {
             Application.LoadLevel("SecondCutScene");
         }
