@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 
@@ -82,7 +83,8 @@ public class playerScript : MonoBehaviour
     }
     void RestartGame()
     {
-        Application.LoadLevel("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       // Application.LoadLevel("SampleScene");
     }
 
     public void Update()
@@ -94,7 +96,7 @@ public class playerScript : MonoBehaviour
           
             Debug.Log("Die");
             m_animator.SetTrigger("Die");
-          //  RestartGame();
+           RestartGame();
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))

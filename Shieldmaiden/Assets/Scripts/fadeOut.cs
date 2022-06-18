@@ -8,7 +8,7 @@ public class fadeOut : MonoBehaviour
     private Animator m_animator;
 
     public float currentTime = 0f;
-    float startingTime = 1.3f;
+    float startingTime = 3f;
     // Start is called before the first frame update
     void Start()
     {
