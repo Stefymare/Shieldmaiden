@@ -19,7 +19,14 @@ public class healthPickup : MonoBehaviour
             GameObject HealthSound = GameObject.Find("HealthFX");
             AudioSource HealthFX = HealthSound.GetComponent<AudioSource>();
             HealthFX.Play();
-            _playerScript.playerHealth += 10;
+            if (_playerScript.playerHealth < 100)
+            {
+                _playerScript.playerHealth += 10;
+            }
+            if(_playerScript.playerHealth == 105)
+            {
+                _playerScript.playerHealth = 100;
+            }
             Debug.Log(_playerScript.playerHealth);
             Destroy(this.gameObject);
            
