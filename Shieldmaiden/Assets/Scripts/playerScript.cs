@@ -1,90 +1,106 @@
+//Class that defines the player's behavior.
+
+//Import libraries.
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-
-
 public class playerScript : MonoBehaviour
 {
-    public bool altarPressed = false;
-    public bool godPower1 = false;
-    // [SerializeField] public int Damage = 10;
-    public GameObject player;
-    public GameObject lightningparticles;
-    public weaponEnabler weaponEnabler;
-    [SerializeField] public int playerHealth;
+    public bool altarPressed = false; //Declares boolean for altar being pressed to false.
 
-    private Animator m_animator;
+    public bool godPower1 = false; //Declares boolean for cool-down UI to false.
 
+    public GameObject player; 
 
-    public GameObject AltarUI;
+    public GameObject lightningparticles; //Declares variable to store particle effect.
 
-    public AltarBehavior _altarScript;
+    public weaponEnabler weaponEnabler; //Declares variable to store weaponenabler script.
 
-    public AudioSource random;
-    public AudioClip[] audioClipArray;
+    [SerializeField] public int playerHealth; //Declares variable to store player's health.
 
-    public Slider Slider;
+    private Animator m_animator; //Declares variable to access the player's animator.
 
-    public bool appliedDamaged = false;
-    public bool block = false;
+    public GameObject AltarUI; //Declares variable to access the altar's UI.
 
-    public int DamageToTake = 10;
-    public int ReducedDamage = 5;
+    public AltarBehavior _altarScript; //Declares variable to access the altar's script.
 
-    public enemyHealthManager enemyHealthManager;
+    public AudioSource random; //Declares variable to store audio source.
 
+    public AudioClip[] audioClipArray; //Creates array to store audio clips.
+
+    public Slider Slider; //Declares variable to access slider.
+
+    public bool appliedDamaged = false; //Sets boolean for applied damage to false.
+
+    public bool block = false; //Sets boolean for blocking to false.
+
+    public int DamageToTake = 10; //Creates int for damage and sets it to 10.
+
+    public int ReducedDamage = 5; //Creates int for reduced damage and sets it to 5.
+
+    public enemyHealthManager enemyHealthManager; //Declares variable to access the enemy health manager script.
+
+    //Matches the slider to player's health.
     public void SetHealth(int playerHealth)
     {
         Slider.value = playerHealth;
     }
+
+    //Plays random audio clip from array.
     void Sounds()
     {
         random.clip = audioClipArray[Random.Range(0, audioClipArray.Length)];
         random.PlayOneShot(random.clip);
     }
+
     private void Start()
     {
-        weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>();
-        m_animator = GetComponent<Animator>();
-        random = GetComponent<AudioSource>();
+        weaponEnabler weaponEnabler = player.GetComponent<weaponEnabler>(); //Accesses weapon enabler script.
+        m_animator = GetComponent<Animator>(); //Accesses animator.
+        random = GetComponent<AudioSource>(); //Accesses audio source.
 
     }
+
     private void OnCollisionEnter(Collision collision)
     {
-
+        //If player collides with altar, set boolean to true.
         if (collision.gameObject.tag == "Altar")
         {
             altarPressed = true;
-            Debug.Log(altarPressed);
         }
 
+        //If player collides with bear and all enemies have been defeated, load second cutscene.
         if (collision.gameObject.tag == "Bear" && enemyHealthManager.defeated == true)
         {
             Application.LoadLevel("SecondCutScene");
         }
     }
+
+    //Function triggered when player enter's weapon's collider radius.
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "EnemyWeapon" && appliedDamaged == false)
         {
             appliedDamaged = true;
-            Sounds();
-            GameObject hit = GameObject.Find("Hit_03");
-            ParticleSystem hitEffect = hit.GetComponent<ParticleSystem>();
-            playerHealth = playerHealth - DamageToTake;
-            m_animator.SetTrigger("Damage");
-            hitEffect.Play();
-            Debug.Log(playerHealth);
-        }
+            Sounds(); //Calls function.
 
+            //Plays particle system.
+            GameObject hit = GameObject.Find("Hit_03"); 
+            ParticleSystem hitEffect = hit.GetComponent<ParticleSystem>();
+            hitEffect.Play();
+
+            playerHealth = playerHealth - DamageToTake;
+            m_animator.SetTrigger("Damage"); //Plays getting damage animation.
+        }
     }
+
+    //Restarts game.
     void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-       // Application.LoadLevel("SampleScene");
     }
 
     public void Update()
@@ -114,25 +130,6 @@ public class playerScript : MonoBehaviour
         {
             DamageToTake = ReducedDamage; 
         } else { DamageToTake = 10; }
-       /* _altarScript = AltarUI.GetComponent<AltarBehavior>();
 
-        if (Input.GetKeyDown(KeyCode.E) && _altarScript.powerChosen == true)
-        {
-            lightningparticles.SetActive(true);
-            godPower1 = true;
-            Damage = 20;
-            Debug.Log("GodPowerActivated");
-        }
-        if (weaponEnabler.Dezactivate == true) 
-        {
-            godPower1 = weaponEnabler.GodPower1;
-        }
-        if(godPower1 == false)
-        {
-            lightningparticles.SetActive(false);
-            Damage = 10;
-            Debug.Log("GodPowerDezactivated");
-
-        }*/
     }
 }
