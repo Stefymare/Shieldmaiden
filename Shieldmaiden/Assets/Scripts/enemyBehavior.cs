@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
+
 
 public class enemyBehavior : MonoBehaviour
 {
@@ -39,6 +41,7 @@ public class enemyBehavior : MonoBehaviour
 
     public GameObject m_weapon;
 
+    public Slider Slider; //Declares variable to access slider.
 
     private void OnDrawGizmosSelected()
     {
@@ -112,11 +115,17 @@ public class enemyBehavior : MonoBehaviour
         random2 = GetComponent<AudioSource>();
         agent = GetComponent<NavMeshAgent>();
         currentTime = startingTime;
+        Slider.maxValue = health;
+    }
+    public void SetHealth(int enemyhealth)
+    {
+        Slider.value = enemyhealth;
     }
 
-        // Update is called once per frame
-      void Update()
+    // Update is called once per frame
+    void Update()
         {
+        SetHealth(health);
 
         float distance = Vector3.Distance(target.position, transform.position);
 
