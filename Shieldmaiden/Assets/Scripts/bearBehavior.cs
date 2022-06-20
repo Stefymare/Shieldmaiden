@@ -15,6 +15,7 @@ public class bearBehavior : MonoBehaviour
 
     public enemyHealthManager enemyHealthManager; //Declares variable to acceses enemyHealthManager script.
 
+
     //Plays random audio clip from array.
     void Sounds()
     {
