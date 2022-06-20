@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using StarterAssets;
 
 public class playerScript : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class playerScript : MonoBehaviour
     public int ReducedDamage = 5; //Creates int for reduced damage and sets it to 5.
 
     public enemyHealthManager enemyHealthManager; //Declares variable to access the enemy health manager script.
+    public StarterAssetsInputs StarterAssetsInputs;
 
     //Matches the slider to player's health.
     public void SetHealth(int playerHealth)
@@ -130,6 +132,6 @@ public class playerScript : MonoBehaviour
         {
             DamageToTake = ReducedDamage; 
         } else { DamageToTake = 10; }
-
+       
     }
 }
