@@ -116,6 +116,14 @@ public class playerScript : MonoBehaviour
             m_animator.SetTrigger("Die");
            RestartGame();
         }
+        if (playerHealth < 0)
+        {
+            Sounds();
+
+            Debug.Log("Die");
+            m_animator.SetTrigger("Die");
+            RestartGame();
+        }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
